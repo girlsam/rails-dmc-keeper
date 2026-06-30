@@ -1,0 +1,2 @@
+class DmcColor < ApplicationRecord
+end
