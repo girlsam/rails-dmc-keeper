@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_06_30_211804) do
+ActiveRecord::Schema[8.1].define(version: 2026_07_08_212725) do
   create_table "dmc_colors", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "dmc_code", null: false
     t.string "hex_code", limit: 7, null: false
     t.string "name", null: false
     t.datetime "updated_at", null: false
+    t.index ["dmc_code"], name: "index_dmc_colors_on_dmc_code", unique: true
   end
 
   create_table "inventory_items", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
